@@ -3,3 +3,4 @@ djangorestframework~=3.14.0
 psycopg2-binary
 decouple~=0.0.7
 flake8
+python-dotenv~=1.0.0
