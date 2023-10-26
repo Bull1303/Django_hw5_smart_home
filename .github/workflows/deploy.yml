@@ -47,7 +47,7 @@ jobs:
 
       - name: Тестирование
         run: python manage.py test
-#
+
 #      - name: Деплой
 #        uses: appleboy/ssh-action@master
 #        env:
@@ -57,4 +57,4 @@ jobs:
 #          host: ${{ secrets.SSH_HOST }}
 #          username: ${{ secrets.SSH_USER }}
 #          password: ${{ secrets.SSH_PASSWORD }}
-#          script: expect /home/denis/stocks_products/deploy.exp
+#          script: expect /home/denis/Django_hw5_smart_home/deploy.exp
