@@ -12,7 +12,9 @@ class Sensor(models.Model):
 
 
 class Measurement(models.Model):
-    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='sensor',
+    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE,
+                               related_name='sensor',
                                verbose_name='Модель датчика')
     temperature = models.FloatField(verbose_name='Температура')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата измерения')
+    created_at = models.DateTimeField(auto_now_add=True,
+                                      verbose_name='Дата измерения')
