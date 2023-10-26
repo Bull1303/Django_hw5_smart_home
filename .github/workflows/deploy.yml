@@ -15,7 +15,6 @@ jobs:
       DB_NAME: ${{ secrets.DB_NAME }}
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
       ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
-      POSTGRES_HOST_AUTH_METHOD: trust
     services:
       postgresql_service:
         image: postgres:12
@@ -26,6 +25,7 @@ jobs:
         ports:
           - 5432:5432
         options:
+          -e POSTGRES_PASSWORD=postgres
           --health-cmd pg_isready
           --health-interval 5s
           --health-timeout 5s
